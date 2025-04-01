@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './Hero.scss';
 
 const Hero = () => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(() =>{
+        const savedCount = localStorage.getItem('count');
+        return savedCount ? parseInt(savedCount, 10) : 0
+    });
 
     useEffect(() => {
-        console.log('Счетчик изменился');
+        localStorage.setItem('count', count)
+        console.log('Счетчик изменился', count);
     }, [count]); 
 
     return (
@@ -15,6 +19,7 @@ const Hero = () => {
                     <div className="hero__wrapper">
                     <p>Счетчик: {count}</p>
                     <button onClick={() => setCount(count + 1)}>Увеличить</button>
+                    <button onClick={() => setCount(0)}>Сбросить</button>
                     </div>
                 </div>
             </section>
