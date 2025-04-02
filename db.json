@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Michael",
+            "lastName": "letter",
+            "age": 42,
+            "pasword": 1234
+
+        },
+        {
+            "id": 2,
+            "name": "Sharlotta",
+            "lastName": "letter",
+            "age": 24,
+            "pasword": 5242
+
+        },
+        {
+            "id": 3,
+            "name": "barbos",
+            "lastName": "letter",
+            "age": 13,
+            "pasword": 25235
+
+        }
+    ]
+}
